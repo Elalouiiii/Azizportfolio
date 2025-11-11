@@ -1,0 +1,167 @@
+/****************************
+table of contents
+**************************************************/
+/* 1 ===>  header desgin */
+/* 2 ===>  button && icon css */
+/* 3 ===>  animation Model */
+/* 4 ===>  Model css */
+/* 5 ===>  responsive desgin media quary  css* */
+
+
+
+
+
+
+
+
+
+
+
+/********************************** 1 header desgin***************************************/
+
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+}
+
+header.flex nav {
+    background-color: var(--bgHeader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px rgb(85, 84, 84);
+}
+
+
+header ul.flex {
+    gap: 16px;
+}
+
+
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+header ul li a:hover {
+    color: var(--bleu);
+    opacity: 1;
+    font-size: 0.9rem;
+}
+
+header button.menu {
+    display: none;
+}
+
+/**************************** 2  button && icon css**************************************************/
+
+header button {
+    font-size: 1.2rem;
+}
+
+header .icon-close:hover {
+    font-size: 1.7rem;
+    color: crimson;
+    rotate: 180deg;
+}
+
+header .icon-close{
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+
+}
+header .icon-sun{
+    background-color: white;
+    color: rgb(13, 165, 82);
+}
+
+/**************************** 3 animation Model**************************************************/
+
+@keyframes mymove {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/**************************** 4 Model css**************************************************/
+
+header .fixed {
+    position: fixed;
+    /* top: 0;===>tous dans inset:0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    inset: 0;
+    z-index: 11;
+    background-color: rgba(40, 40, 48, 0.91);
+    border: 1px solid red;
+
+
+
+    /* filter: blur(8px); */
+backdrop-filter: blur(4px);
+}
+
+
+header .fixed ul.model {
+    animation: mymove 0.77s 1;
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secandary);
+
+}
+
+header .fixed ul.model li {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.77rem;
+    padding-top: 0.5rem;
+}
+
+header .fixed ul.model li:last-child {
+    border: none;
+}
+
+header .fixed ul.model li:first-child {
+    text-align: right;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0.2rem;
+    margin-bottom: -1rem;
+}
+
+header .fixed ul.model li a {
+    font-size: 1rem;
+}
+
+
+
+
+
+/**************************** 5 responsive desgin media quary  css**************************************************/
+
+@media (max-width: 700px) {
+    header.flex nav {
+        display: none;
+    }
+
+    header button.menu {
+        display: block;
+    }
+}

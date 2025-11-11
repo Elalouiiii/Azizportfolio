@@ -1,0 +1,31 @@
+footer.flex{
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+footer.flex ul {
+gap: 1rem;
+}
+footer.flex ul a {
+color: var(--title);
+font-size: 0.9rem;
+font-weight: 400;
+}
+footer.flex ul a:hover {
+color: var(--bleu);
+font-size: 1rem;
+font-weight: 500;
+}
+footer.flex p{
+    color: rgb(213, 113, 122);
+}
+
+
+
+/**************************** Footer desgin media quary  css**************************************************/
+
+@media (max-width: 800px) {
+    footer.flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
